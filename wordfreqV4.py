@@ -47,4 +47,5 @@ print(countWord(words))
 ### vi bör kanske sortera efter bokstav på de ord som finns lika många gånger, fråga läraren. isåfall förslagsvis i första metoden alltså innan counting
 ### vi behöver också ta bort ord "stopwords" förslagsvis vid början av counting
 ### fråga om vi behöver ha med nummer som ord
-### sedan ska vi skapa en snyggare print metod
+
+### sedan ska vi skapa en snyggare print i en ny metod
