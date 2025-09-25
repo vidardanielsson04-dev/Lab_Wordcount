@@ -29,4 +29,24 @@ def tokenize(document):
 
     return words
 
+
+def countWords(words,stopWords):
+    sorteradDic = {}
+    i = 0
+    while i < len(words):
+        if words[i] in stopWords:
+            i += 1
+        elif words[i] not in sorteradDic:
+            sorteradDic[words[i]] = 1
+            i += 1
+        elif words[i] in sorteradDic:
+            i += 1
+
+    return sorteradDic
+
+    
+
+
+
+
 print(tokenize(document))
