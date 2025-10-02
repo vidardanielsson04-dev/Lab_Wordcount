@@ -1,4 +1,4 @@
-document = ["He is in the room, she said."]
+
 
 def tokenize(document):
     words = []
@@ -31,22 +31,32 @@ def tokenize(document):
 
 
 def countWords(words,stopWords):
-    sorteradDic = {}
+    frequencies = {}
     i = 0
     while i < len(words):
         if words[i] in stopWords:
             i += 1
-        elif words[i] not in sorteradDic:
-            sorteradDic[words[i]] = 1
+        elif words[i] not in frequencies:
+            frequencies[words[i]] = 1
             i += 1
-        elif words[i] in sorteradDic:
+        elif words[i] in frequencies:
+            frequencies[words[i]] += 1
             i += 1
 
-    return sorteradDic
+    return frequencies
+
+
+def printTopMost(frequencies,n):
+    sorted_dic = sorted(frequencies.items(), key=lambda x: x[1], reverse=True)
+    i = 0
+    while i < n and i < len(sorted_dic):
+        key, value = sorted_dic[i]
+        print(key.ljust(20), str(value).rjust(5))
+        i += 1
+
+
 
     
 
 
 
-
-print(tokenize(document))
