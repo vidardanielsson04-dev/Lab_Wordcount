@@ -51,8 +51,10 @@ def printTopMost(frequencies,n):
     i = 0
     while i < n and i < len(sorted_dic):
         key, value = sorted_dic[i]
-        print(key.ljust(20), str(value).rjust(5))
+        print(key.ljust(20) + str(value).rjust(5))
         i += 1
+    
+        
 
 
 
